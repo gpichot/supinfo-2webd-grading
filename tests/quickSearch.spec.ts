@@ -7,7 +7,7 @@ import { ItemDetailPage } from "./pages/ItemDetailPage";
  * Tests for the quick search functionality (4 points)
  */
 test.describe("Quick Search Feature (4pts)", () => {
-	test("should display search results when performing a quick search", async ({
+	test("[1pt] should display search results when performing a quick search", async ({
 		page,
 	}) => {
 		const homePage = new HomePage(page);
@@ -22,7 +22,7 @@ test.describe("Quick Search Feature (4pts)", () => {
 		expect(resultsCount).toBeGreaterThan(0);
 	});
 
-	test("should navigate to item detail from search results", async ({
+	test("[1pt] should navigate to item detail from search results", async ({
 		page,
 	}) => {
 		const homePage = new HomePage(page);
@@ -40,7 +40,7 @@ test.describe("Quick Search Feature (4pts)", () => {
 		await expect(itemDetailPage.itemTitle).toBeVisible();
 	});
 
-	test("quick search should be available on all pages", async ({ page }) => {
+	test("[1pt] quick search should be available on all pages", async ({ page }) => {
 		// Check home page
 		const homePage = new HomePage(page);
 		await homePage.goto();
@@ -55,7 +55,7 @@ test.describe("Quick Search Feature (4pts)", () => {
 		await expect(homePage.quickSearchInput).toBeVisible();
 	});
 
-	test("should show appropriate message when no results are found", async ({
+	test("[1pt] should show appropriate message when no results are found", async ({
 		page,
 	}) => {
 		const homePage = new HomePage(page);

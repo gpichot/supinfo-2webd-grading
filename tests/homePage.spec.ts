@@ -6,7 +6,7 @@ import { ItemDetailPage } from "./pages/ItemDetailPage";
  * Tests for the main/index page (4 points)
  */
 test.describe("Main/Index Page (4pts)", () => {
-	test("should display highlighted articles on the home page", async ({
+	test("[1.5pts] should display highlighted articles on the home page", async ({
 		page,
 	}) => {
 		const homePage = new HomePage(page);
@@ -17,7 +17,7 @@ test.describe("Main/Index Page (4pts)", () => {
 		expect(articlesCount).toBeGreaterThan(0);
 	});
 
-	test("should navigate to item detail when clicking on a highlighted article", async ({
+	test("[1.5pts] should navigate to item detail when clicking on a highlighted article", async ({
 		page,
 	}) => {
 		const homePage = new HomePage(page);
@@ -31,7 +31,7 @@ test.describe("Main/Index Page (4pts)", () => {
 		expect(itemDetailPage.itemTitle).toBeVisible();
 	});
 
-	test("should display highlight section title on the home page", async ({
+	test("[1pt] should display highlight section title on the home page", async ({
 		page,
 	}) => {
 		const homePage = new HomePage(page);

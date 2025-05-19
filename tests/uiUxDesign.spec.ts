@@ -7,7 +7,7 @@ import { ItemDetailPage } from "./pages/ItemDetailPage";
  * Tests for the global design including UI/UX (4 points)
  */
 test.describe("Global Design (UI/UX) (4pts)", () => {
-	test("should have consistent navigation across all pages", async ({
+	test("[1.5pts] should have consistent navigation across all pages", async ({
 		page,
 	}) => {
 		// Check navigation on home page
@@ -29,7 +29,7 @@ test.describe("Global Design (UI/UX) (4pts)", () => {
 		expect(itemDetailNavLinksCount).toBe(navLinksCount);
 	});
 
-	test("should have accessible form controls", async ({ page }) => {
+	test("[1.5pts] should have accessible form controls", async ({ page }) => {
 		const advancedSearchPage = new AdvancedSearchPage(page);
 		await advancedSearchPage.goto();
 
@@ -51,7 +51,7 @@ test.describe("Global Design (UI/UX) (4pts)", () => {
 		expect(focusedElement).not.toBe("");
 	});
 
-	test("should have appropriate visual hierarchy and typography", async ({
+	test("[1pt] should have appropriate visual hierarchy and typography", async ({
 		page,
 	}) => {
 		const homePage = new HomePage(page);

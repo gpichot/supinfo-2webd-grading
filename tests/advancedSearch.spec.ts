@@ -6,7 +6,7 @@ import { ItemDetailPage } from "./pages/ItemDetailPage";
  * Tests for the advanced search functionality (4 points)
  */
 test.describe("Advanced Search Feature (4pts)", () => {
-	test("should allow searching by department", async ({ page }) => {
+	test("[0.5pt] should allow searching by department", async ({ page }) => {
 		const advancedSearchPage = new AdvancedSearchPage(page);
 		await advancedSearchPage.goto();
 
@@ -20,7 +20,7 @@ test.describe("Advanced Search Feature (4pts)", () => {
 		expect(resultsCount).toBeGreaterThan(0);
 	});
 
-	test("should allow searching by date range", async ({ page }) => {
+	test("[0.5pt] should allow searching by date range", async ({ page }) => {
 		const advancedSearchPage = new AdvancedSearchPage(page);
 		await advancedSearchPage.goto();
 
@@ -35,7 +35,7 @@ test.describe("Advanced Search Feature (4pts)", () => {
 		expect(resultsCount).toBeGreaterThan(0);
 	});
 
-	test("should allow searching by multiple criteria", async ({ page }) => {
+	test("[1pt] should allow searching by multiple criteria", async ({ page }) => {
 		const advancedSearchPage = new AdvancedSearchPage(page);
 		await advancedSearchPage.goto();
 
@@ -58,7 +58,7 @@ test.describe("Advanced Search Feature (4pts)", () => {
 		await expect(itemDetailPage.itemTitle).toBeVisible();
 	});
 
-	test("should allow searching by text", async ({ page }) => {
+	test("[1pt] should allow searching by text", async ({ page }) => {
 		const advancedSearchPage = new AdvancedSearchPage(page);
 		await advancedSearchPage.goto();
 
@@ -77,7 +77,7 @@ test.describe("Advanced Search Feature (4pts)", () => {
 		);
 	});
 
-	test("should show appropriate message when no results match criteria", async ({
+	test("[1pt] should show appropriate message when no results match criteria", async ({
 		page,
 	}) => {
 		const advancedSearchPage = new AdvancedSearchPage(page);

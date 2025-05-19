@@ -6,7 +6,7 @@ import { ItemDetailPage } from "./pages/ItemDetailPage";
  * Tests for the item detail page (4 points)
  */
 test.describe("Item Detail Page (4pts)", () => {
-	test("should display item details when navigating to a specific item", async ({
+	test("[2pts] should display item details when navigating to a specific item", async ({
 		page,
 	}) => {
 		// Navigate to a known item
@@ -19,7 +19,7 @@ test.describe("Item Detail Page (4pts)", () => {
 		await expect(itemDetailPage.itemDepartment).toBeVisible();
 	});
 
-	test("should display comprehensive information about the item", async ({
+	test("[2pts] should display comprehensive information about the item", async ({
 		page,
 	}) => {
 		// Navigate to a known item
